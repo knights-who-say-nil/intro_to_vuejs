@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Vue.js Intro</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+  <div id="app"> <!-- all vue.js code goes in this element -->
+    
+    <!-- Render a model in the view with double handle bars -->
+    {{ message }}
+
+    <!-- 2 way bind a model to an input -->
+    <input type="text" v-model="message">
+
+    <!-- use v-on:click to trigger a method with an HTML element -->
+    <button v-on:click="changeMessage()">Compute sum</button>
+
+    <!-- conditonally display an element with v-if giving a boolean value -->
+    <h3 v-if="showInfo">You can see me!!!</h3>
+    <button v-on:click="toggleInfo()">Show Info</button>
+
+    <!-- v-for is similar to an each loop, duplicating the element it is on -->
+    <!-- once for every element in the array -->
+    <!-- this follows the pattern of "x in xs" -->
+    <div v-for="movie in movies">{{ movie }}</div>
+
+    <!-- You can modify models by submitting input bound to a model  -->
+    <!-- and triggering a method -->
+    <div>
+      New Movie: <input type="text" v-model="newMovie">
+      <button v-on:click="addMovie()">Add Movie</button>
+    </div>
+
+  </div> <!-- end of vue.js elements -->
+  <script src="index.js"></script>
+</body>
+</html>
