@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Vue.js Intro</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+  <div id="app">
+    <h2>{{ message }}</h2>
+    <h1>Guess a number!</h1>
+    <div>
+      <input type="number" v-model="guess">
+      <button v-on:click="checkGuess()">Submit</button>
+      <button v-on:click="resetGame()">Play again</button>
+    </div>
+    <div>
+    </div>
+  </div>
+  <script src="guess_a_number.js"></script>
+</body>
+</html>
